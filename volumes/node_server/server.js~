@@ -4,8 +4,8 @@ var app = express();
 var PORT = 3002;
 
 //Allows requests from all over. No restrictions
-//var cors = require('cors');
-//app.use(cors());
+var cors = require('cors');
+app.use(cors());
 
 
 //Exposed via environment variables via the link parameter in the docker-compose.yml file

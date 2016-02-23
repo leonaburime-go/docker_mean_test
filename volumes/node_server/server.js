@@ -34,7 +34,7 @@ app.get('/', function(req, res) {
 
 		//Cursor that iterates over results turns those results into an array
 		cursor.toArray(function(err, data){
-			res.send(data || err);
+			res.send(data[0].name || err);
 		    })
 		    })
   

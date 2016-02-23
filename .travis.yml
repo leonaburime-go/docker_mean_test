@@ -29,4 +29,6 @@ install:
     #A framework to run tests from
   - npm i -g mocha
 
-script: true
+script: 
+  - cd tests
+  - mocha
