@@ -1,0 +1,31 @@
+#Sudo access is required to use Docker
+sudo: required
+
+#Specifies what language we will be testing against
+language: node_js
+
+#Tells CI to use a Docker setup
+services:
+  - docker
+
+#Allows us to test against NodeJS 4.0 and 4.1
+node_js:
+  - "4.1"
+  - "4.0"
+
+#Allows us to create our containers at the earliest possible time
+before_install:
+    #Fresh install of all containers
+  - docker-compose build --no-cache
+    #Create and run the containers
+  - docker-compose up -d
+    #Sleep to give some time for the containers to start up
+  - sleep 3
+    #Verify the containers were actually created and are running
+  - docker ps -a
+
+install:
+    #A framework to run tests from
+  - npm i -g mocha
+
+script: true
