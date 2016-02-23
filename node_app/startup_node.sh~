@@ -1,0 +1,7 @@
+
+#!/bin/bash                                                                                                                                                                                               
+mkdir -p /usr/src
+cp -rf /docker_volumes/node_server /usr/src/app
+
+#sleep 10000
+node /usr/src/app/server.js

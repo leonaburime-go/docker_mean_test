@@ -1,0 +1,12 @@
+data_volumes:
+  build: ./volumes
+  volumes:
+    - ./volumes:/docker_volumes
+node_server:
+  build: ./node_app
+  volumes_from:
+    - data_volumes
+  environment:
+    - PORT=3002
+  ports:
+    - "3002:3002"
