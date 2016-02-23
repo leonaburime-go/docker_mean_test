@@ -5,8 +5,8 @@ var request = require('request');
 var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 var PORT = 3002;
-//var url = 'localhost';
-var url = '192.168.99.100';
+var url = 'localhost';
+//var url = '192.168.99.100';
 
 
 function getResult(url_arg){

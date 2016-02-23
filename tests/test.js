@@ -44,11 +44,12 @@ it('should return phrase "hello world" asynchronously', function() {
   return expect(result).to.eventually.equal('hello world');
 });
 
+/*
 it('should return asynchronously the name you put in the MongoDB container', function() {
 	
   var result = getResult();
   var name = 'Leon';
   return expect(result).to.eventually.equal(name);
 });
-
+*/
 
