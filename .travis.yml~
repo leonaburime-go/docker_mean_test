@@ -4,7 +4,6 @@ sudo: required
 #Specifies what language we will be testing against
 language: node_js
 
-
 #Tells CI to use a Docker setup
 services:
   - docker
